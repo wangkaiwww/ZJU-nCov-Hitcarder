@@ -94,7 +94,7 @@ class HitCarder(object):
                 return True
         #with open("form.txt", "w", encoding="utf-8") as f:
         #     f.write(new_form)
-        return True
+        return False
 
     def get_info(self, html=None):
         """Get hit card info, which is the old info with updated new time."""
@@ -140,7 +140,7 @@ class HitCarder(object):
         new_info['sfymqjczrj'] = old_info['sfymqjczrj'] # 入境
         new_info['sfqrxxss'] = 1 # 属实
         new_info['campus'] = '紫金港校区' #校区
-        new_info['verifyCode'] =  ocr.classification(resp.content)#验证码
+        #new_info['verifyCode'] =  ocr.classification(resp.content)#验证码
 
         self.info = new_info
         # print(json.dumps(self.info))

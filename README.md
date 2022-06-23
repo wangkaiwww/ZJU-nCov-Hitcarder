@@ -30,7 +30,7 @@
 4. 配置钉钉消息通知（可选）
    
    - 手机版钉钉 > 右上角添加 > 面对面建群 > 创建之后得到只有你一个人的群聊
-   - 电脑版钉钉 > 群设置 > 智能群助手 > 添加机器人 > 自定义，名字随便填，安全设置选择`自定义关键字`，填`ZHR`，然后下一步复制Webhook。
+   - 电脑版钉钉 > 群设置 > 智能群助手 > 添加机器人 > 自定义，名字随便填，安全设置选择`自定义关键字`，填`打卡`，然后下一步复制Webhook。
    - Settings > Secrets > Actions > New repository secret， 添加`DINGTALK_TOKEN`，内容为刚才复制的Webhook中 `access_token=` 后面的内容。
 
 5. 
@@ -50,4 +50,5 @@
    Actions > Monthly Update Action > Disable workflow。
 
 
-ps.如果显示打卡信息已改变，请手动打卡，可以把第97行的return Flase改成return True，或是重新生成一遍form.txt
+2022/5/9:健康打卡页面修正了“今日是否有涉及涉疫情的管控措施是”的文本错误，将form.TXT替换即可
+2022/5/19:健康打卡删去了验证码，更新form.TXT和hitcarder.PY
